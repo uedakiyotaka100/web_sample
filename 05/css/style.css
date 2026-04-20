@@ -1,0 +1,274 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:#ffebcd;
+}
+
+main{
+    background-color: #fff;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 30px;
+    position: relative;
+}
+/*Googleフォント*/
+.libertinus-mono-regular {
+  font-family: "Libertinus Mono", monospace;
+  font-weight: bold;
+  font-style: normal;
+}
+
+h1{
+  background-image: url('../images/mongoru.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.midashi {
+  background-color: rgba(255, 255, 255, 0.5); /* 横帯の色と透明度 */
+  width: 100%;
+  display: block;
+  text-align: center;
+  
+}
+.sub{
+  font-size: 14px;
+  color:#DC251B;
+  display: inline;
+}
+
+nav ul{
+    padding-top: 2.5rem;
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    margin-right: 1rem;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    background-color: #DC251B;
+    color: #fff;
+    padding: 0.7rem;
+    border-radius: 14px;         /* ← 角丸指定 */
+
+}
+nav ul li a:hover{
+    opacity: 0.7;
+}
+
+/* 画面幅が狭い場合（例: 768px以下）に適用されるスタイル */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* 縦並びにする */
+    align-items: stretch; /* アイテムを親要素の幅に広げる */
+  }
+
+  nav ul li {
+    margin: 20px 0; /* 縦並び時の余白 */
+    width: 100%; /* 親要素の幅いっぱいに広げる */
+    text-align: center; /* テキストを中央揃えにする */
+  }
+
+  nav ul li a {
+    width: 100%; /* 親要素の幅いっぱいに広げる */
+  }
+}
+
+
+h2{
+    font-size: 22px;
+    color: #333;
+    border-left: #DC251B solid 5px;
+    border-bottom: #DC251B solid 2px;
+    margin-top: 2rem;
+    margin-bottom: 1.0rem;
+    background-color: #FFFBF0; 
+    padding: 10px; /* 必要であれば、文字と背景の間に余白を追加 */
+}
+
+.button{
+    display: flex;
+    justify-content: center;   /* X軸方向の中央寄せ */
+    margin: 40px auto;         /* 上下マージン + 横中央寄せ（ブロック要素の場合） */
+    padding-bottom: 10px;
+}
+.button a{
+  text-decoration: none;     /* 下線を消す */
+  background-color: #cc0000; /* ボタン背景色 */
+  color: white;              /* 文字色 */
+  padding: 12px 24px;        /* ボタンサイズ調整 */
+  border-radius: 10px;       /* 角を丸くする */
+  font-size: 1.2em;          /* 少し大きめの文字に */
+  font-weight: bold
+
+}
+.button a:hover{
+    background-color: orange;
+}
+footer{
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem;
+}
+
+.horizontal {
+  display: flex;
+  align-items: center; /* 垂直方向の中央揃え */
+  gap: 10px;            /* 画像と説明文の間隔 */
+}
+
+.horizontal img {
+  width: 200px;         /* 画像サイズを調整 */
+  height: auto;
+}
+
+.horizontal figcaption {
+  font-size: 16px;
+  text-align: left;
+  color: #333;
+  margin-top: 8px;
+}
+
+ul {
+    margin-top: 30px;
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+figure {
+    text-align: center;
+}
+
+/*  ネパール/チベットなど写真のタイトル     */
+.photo_title{
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.images-2col,
+.images-3col,
+.images-4col
+{
+  display: flex;       /*横並び*/
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.images-2col img {
+  width: calc(50% - 30px);
+  box-sizing: border-box; /* パディングやボーダーも含めて幅を計算 */
+  height: auto;
+  max-width: 35%; /* 最大幅を計算された幅の80%に制限 */
+}
+
+.images-3col img {
+  width: calc(33.333% - 30px);
+  box-sizing: border-box; /* パディングやボーダーも含めて幅を計算 */
+  height: auto;
+  max-width: 25%; /* 最大幅を計算された幅の80%に制限 */
+}
+
+.images-3col-sp img {
+  width: calc(33.333% - 30px);
+  box-sizing: border-box; /* パディングやボーダーも含めて幅を計算 */
+  height: auto;
+  margin-right: 20px;
+  max-width: 50%; /* 最大幅を計算された幅の80%に制限 */
+}
+
+.images-4col img {
+  width: calc(25% - 30px);
+  box-sizing: border-box; /* パディングやボーダーも含めて幅を計算 */
+  height: auto;
+  max-width: 17%; /* 最大幅を計算された幅の80%に制限 */
+}
+
+/* ゲーム画像 */
+.image-item{
+  width: calc(33.333% - 30px); /* .images-3col の場合 */
+  box-sizing: border-box; /* パディングやボーダーも含めて幅を計算 */
+  display: flex; /* 子要素（画像と題名）をflexboxで制御 */
+  flex-direction: column; /* 縦方向に並べる */
+  align-items: center; /* 水平方向（横方向）で中央揃え */
+  margin-bottom: 20px; /* 各アイテム間の縦方向のスペース */
+}
+
+/* ゲーム画像自体のスタイル */
+.image-item img {
+    width: 100%; /* 親要素 (figure) の幅に合わせる */
+    height: auto; /* アスペクト比を維持 */
+    display: block; /* 画像の下に余白ができないように */
+}
+
+/* ゲーム画像の題名のスタイル */
+.image-item figcaption {
+    text-align: center; /* テキストを中央揃え */
+    margin-top: 10px; /* 画像と題名の間隔 */
+    font-size: 1.1em; /* フォントサイズ調整 */
+    color: #333; /* 文字色 */
+    font-weight: bold; /* 必要であれば太字に */
+}
+/* ゲーム画像の大きさ */
+.images-3col .image-item {
+    width: calc(33.333% - 30px);
+}
+
+/* img自体には max-width: 100% などは設定しません。必要ならfigureに設定 */
+.images-3col .image-item img{
+    max-width: 100%; /* 親要素（.image-item）の幅を超えないように */
+}
+
+
+.description {
+  margin-top: 10px;
+  text-align: left;
+  font-size: 1.0rem;
+  color: #444;
+}
+
+/*罫線*/
+.line {
+  border-top: 1px solid #999;
+  width: 100%;
+  margin: 20px 0;
+}
+
+/*箇条書きの数字を右に寄せる*/
+.right-numbered {
+  list-style-position: inside; /* マーカーを要素内側に */
+}
+
+.photo_title {
+  /* background-color: #FFFBF0; タイトルの背景色 */
+  color: #2c3e50;           /* 濃いめの文字色でコントラストを出す */
+  padding: 6px 16px;       /* 上下左右にパディング */
+  border-left: 5px solid #DC2518; /* 左側に太めのボーダーライン */
+  border-right: 5px solid #DC2518; /* 左側に太めのボーダーライン */
+  
+  border-radius: 10px;       /* 角を少し丸くする */
+  display: inline-block;    /* テキストの幅に合わせて背景を調整 */
+  margin-bottom: 20px;
+  font-weight: bold;        /* 太字にする */
+}
+

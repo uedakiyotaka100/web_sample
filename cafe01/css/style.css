@@ -1,0 +1,192 @@
+/*コードの文字化けを防ぐ*/
+@charset "UTF-8";
+
+/*共通部分
+------------------------------------------------*/
+html{
+    /*ユーザのブラウザ設定した文字サイズを正しく反映*/
+    font-size: 100%;
+}
+body{
+    /*書体の指定*/
+    font-family: 'Hiragino Kaku Gothic ProN',"Hiragino Sans", "BIZ UDPGothic" sans-serif;
+    /*行の高さの指定*/
+    line-height: 1.7;
+    color: #432;
+}
+a{
+    /*<a>タグの飾りつけ（下線や黒丸）不要*/
+    text-decoration: none;
+}
+img{
+    /*画像の大きさの指定*/
+    max-width: 100%;
+}
+ /*ロゴレイアウト（配置を画面センターにする）*/
+ .align-center{
+    text-align: center;
+ }
+
+/*見出し「We'll Make Your Day」と本文テキスト
+-------------------------------------------*/
+.font-english {
+    font-family: 'Philosopher', sans-serif;
+    font-weight: normal;
+}
+.page-title,.heading-large{
+    font-size: 3rem;
+    text-align: center;
+}
+.page-title{
+    margin-top: 2rem;
+    /*テキストの上下のスペース*/
+    line-height: 1.4;
+}
+.heading-large{
+    margin-bottom: 1rem;
+}
+/*  ボタン  */
+.btn{
+    display: inline-block;
+    font-size: 1.5rem;
+    background-color: #0bd;
+    color: #fff;
+    border-radius: 8px;
+    padding: .75rem 1.5rem;
+    /*トランジション*/
+    transition: 3.0s;
+}
+/*  ボタンにカーソルを重ねた時に適用される  */
+.btn:hover{
+    background-color: #0090aa;
+    background-color: #f0e087;
+}
+
+/*ヘッダーエリア
+------------------------------------------------*/
+.page-header{
+    padding-top: .5rem;
+}
+.logo{
+    /*ロゴの横幅の指定*/
+    width: 210px
+}
+
+.main-nav{
+    /*navを横並び*/
+    display: flex;
+    /*navを中央揃い*/
+    justify-content: center;
+    /*各nav間*/
+    gap: 2.5rem;
+    font-size: 1.5rem;
+    /*リストマーカに対する装飾なし*/
+    list-style: none;
+}
+/*navの通常時*/
+.main-nav a{
+    color: #432;
+}
+/*navにカーソルを乗せた時*/
+.main-nav a:hover{
+    color: #0bd;
+}
+/*navにクリックした時*/
+.main-nav a:active{
+    color: red;
+}
+/*ボディ
+------------------------------------------------*/
+/*背景画像*/
+.cover{
+    /*画像の縦横比保持したまま、表示領域をうめつくすように表示*/
+    background-size: cover;
+    background-position: center bottom;
+    height: 800px;
+    /*画像の縦横比保持したまま、画像がすべて表示*/
+    /* background-size: contain; */
+}
+.cover-home{
+    background-image: url(../images/cover-home-s.webp);
+}
+
+/*本文テキスト*/
+.about{
+    /*736pxよりも画面が広くなると、margin sutoにより自然と左右に余白ができる*/
+    max-width:736px;
+    /*上下・左右*/
+    padding: 0 1.5rem;
+    /*上・左右・下*/
+    margin: 3rem auto 0;
+}
+.about p{
+    margin-bottom: 3rem;
+}
+
+/*フッターエリア
+------------------------------------------------*/
+.page-footer{
+    /*背景画像の指定*/
+    background-image: url(../images/footer-s.webp);
+    background-size: cover;
+    background-position: center;
+    padding-top: 12rem;
+}
+/*テーブル全体の設定*/
+.info{
+    width: 100%;
+    /*最大幅の指定*/
+    max-width: 544px;
+    margin: auto;
+    /*上下・左右*/
+    padding: 0 1.5rem;
+    /*1行ごとに1本の線を引く指定*/
+    border-spacing: 0;
+}
+.info th,
+.info td{
+    border-bottom: 1px solid #c9c2bc;
+}
+.info th{
+    text-align: left;
+    font-weight: normal;
+    padding: 1rem;
+}
+.info td{
+    padding: 1rem 0;
+}
+/*コピーライト*/
+.copyright{
+    background-color: #432;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 6rem;
+    color: #fff;
+}
+
+/*デスクトップ版
+------------------------------------------------*/
+/*画面横幅が800px以上になった場合*/
+@media(min-width:800px){
+    /*見出し「We'll Make Your Day」*/
+    .page-title{
+        font-size: 5rem;
+    }
+
+    /*About CafeとInfomation*/
+    .heading-large{
+        font-size:4rem
+    }
+
+    /*ヘッダー（ナビゲーションメニュー）*/
+    .main-nav{
+        font-size: 2rem;
+    }
+}
+
+
+
+
+
+
+
